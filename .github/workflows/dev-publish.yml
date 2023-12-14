@@ -37,6 +37,7 @@ jobs:
   deployment:
     runs-on: windows-latest
     environment: development
+    needs: [build]
     steps:
       - name: deploy
         run: echo deployment approval test
